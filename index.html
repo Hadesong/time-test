@@ -1,43 +1,43 @@
  <head>
     <style>
         @font-face {
-            font-family:'din';
+            font-family: 'din';
             src: url('./Ubuntu-B.ttf');
-
         }
 
         body {
+            margin: 0;
+            border: 0;
+            padding: 0;
             background-color: black;
             width: 100vw;
             height: 100vh;
         }
 
         #t {
-            font-family:'din';
+            font-family: 'din';
             color: #eeeeee;
             text-align: center;
             width: 100vw;
             height: 100vh;
-            display: table-cell;
-            vertical-align: middle;
-            font-size: 40.6vw;
+            display: flex;
+            align-items: center;
+            font-size: 45vw;
+            letter-spacing: -29px;
             font-weight: bold;
         }
 
         button {
-            margin-top: 120px;
+            margin-top: 150px;
             width: 150px;
             height: 100px;
-            display: table-caption;
-            vertical-align: auto;
-
         }
     </style>
 </head>
 
 <body>
     <div id="t"></div>
-    <button id="click_to_full" onclick="toFull()" style="display: none;">全屏</button>
+    <button id="click_to_full" onclick="toFull()" style="display: none;">全屏显示</button>
     <button id="click_exit_full" onclick="exitFull()" style="display: none;">退出全屏</button>
 </body>
 <script>
@@ -57,7 +57,7 @@
             s = "0" + s
         }
         // document.getElementById("t").innerHTML = h + ":" + m
-        document.getElementById("t").innerHTML = m+":"+s
+        document.getElementById("t").innerHTML = m + ":" + s
         // console.log(d)
     }, 1000);
 </script>
@@ -208,5 +208,8 @@
     document.getElementById("click_exit_full").style.display = "none";
 
     fullscreen_start_is_ok = 1;
+
+
+
 
 </script>
