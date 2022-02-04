@@ -1,5 +1,17 @@
-<head>
+ <head>
     <style>
+        @font-face {
+
+            /* font-properties */
+
+            font-family:'SpinCycle';
+            src: url('./SpinCycle.ttf'),
+                url(''),
+                url('');
+            /* IE9 */
+
+        }
+
         body {
             background-color: black;
             width: 100vw;
@@ -7,17 +19,25 @@
         }
 
         #t {
-            font-family: Copperplate;
-            color: #dddddd;
+            font-family:'SpinCycle';
+            color: #cccccc;
             text-align: center;
             width: 100vw;
             height: 100vh;
             display: table-cell;
             vertical-align: middle;
             /* font-size:100%; */
-            font-size: 35vw;
+            font-size: 33.5vw;
             /* width: fit-content; */
-            font-weight: bold;
+            /* font-weight: bold; */
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            display: table-caption;
+            vertical-align: auto;
+
         }
     </style>
 </head>
@@ -34,13 +54,18 @@
         var d = new Date();
         var h = d.getHours()
         var m = d.getMinutes()
+        var s = d.getSeconds()
         if (h < 10) {
             h = "0" + h
         }
         if (m < 10) {
             m = "0" + m
         }
-        document.getElementById("t").innerHTML = h + ":" + m
+        if (s < 10) {
+            s = "0" + s
+        }
+        // document.getElementById("t").innerHTML = h + ":" + m
+        document.getElementById("t").innerHTML = h + ":" + m+":"+s
         // console.log(d)
     }, 1000);
 </script>
