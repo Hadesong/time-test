@@ -2,7 +2,7 @@
     <style>
         @font-face {
             font-family: 'din';
-            src: url('./DIN-Condensed-Bold-2.ttf');
+            src: url('./Ubuntu-B.ttf');
         }
 
         body {
@@ -22,9 +22,9 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            font-size: 60vw;
+            font-size: 44vw;
             white-space:nowrap;
-            /* letter-spacing: -25px; */
+            letter-spacing: -25px;
             font-weight: bold;
             overflow: hidden;
         }
@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <div id="t">00:00</div>
+    <div id="t">00 00</div>
     <button id="click_to_full" onclick="toFull()" style="display: none;">全屏显示</button>
     <button id="click_exit_full" onclick="exitFull()" style="display: none;">退出全屏</button>
 </body>
@@ -59,7 +59,7 @@
             s = "0" + s
         }
         // document.getElementById("t").innerHTML = h + ":" + m
-        document.getElementById("t").innerHTML = h + ":" + m
+        document.getElementById("t").innerHTML = h + " " + m
         // console.log(d)
     }, 1000);
 </script>
